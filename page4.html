@@ -53,10 +53,9 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page1.html">Narrative</a></li>
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle display-4" href="page1.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Narrative</a><div class="dropdown-menu" aria-labelledby="dropdown-958"><a class="text-black text-primary dropdown-item display-4" href="page1.html">Introduction</a><a class="text-black text-primary dropdown-item display-4" href="page2.html">Timeline<br></a><a class="text-black text-primary dropdown-item display-4" href="page2.html">Data Analysis<br></a></div></li>
                     <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page4.html">Data</a></li>
-                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page2.html">Timeline</a>
-                    </li><li class="nav-item dropdown"><a class="nav-link link text-black dropdown-toggle show display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">About&nbsp;<br></a><div class="dropdown-menu show" aria-labelledby="dropdown-671" data-bs-popper="none"><a class="text-black dropdown-item text-primary display-4" href="page3.html">Our Team</a><a class="text-black dropdown-item text-primary display-4" href="page5.html">Bibliography</a></div></li></ul>
+                    <li class="nav-item dropdown"><a class="nav-link link text-black dropdown-toggle show display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">About&nbsp;<br></a><div class="dropdown-menu show" aria-labelledby="dropdown-671" data-bs-popper="none"><a class="text-black dropdown-item text-primary display-4" href="page3.html">Our Team</a><a class="text-black dropdown-item text-primary display-4" href="page5.html">Bibliography</a></div></li></ul>
                 
                 
             </div>
@@ -77,7 +76,52 @@
                 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>The Airbnb Dataset</strong></h1>
                 
                 
-                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4">Access The Data</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="http://insideairbnb.com/get-the-data/">Access The Data</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content4 cid-tgSW6sg8H8" id="content4-1r">
+    
+
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-md-12 col-lg-10">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
+                    <strong><u>About the Data</u></strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">&nbsp; &nbsp; The dataset used in our project is obtained from Inside Airbnb, which is an organization that has collected Airbnb data for various cities of different countries and continents. The data on this site is originally the publicly accessible data from the Airbnb site, and Inside Airbnb worked on analyzing, cleaning, and rearranging the data to facilitate any future use of this Airbnb data by the public. At this point, most of the cities included in the dataset are metropolises, but the dataset is still expanding to include data from more regions around the globe. Since our research questions mainly focus on the Airbnb dataset of Los Angeles, we requested the listing, reviews, calendar, and neighborhood data of LA from the website directly. <br><br>&nbsp; For Los Angeles, the dataset contains information about more than 40k Airbnbs in the listing file; over 1 million Airbnb listing records in the reviews file; the availability of all recorded Airbnbs in the future 12 months in the calendar file; and list of all neighborhoods and corresponding neighborhood groups in Los Angeles.&nbsp;</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15 cid-tgSX93JOO6" id="content15-1s">
+
+    
+
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-10">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5">
+                            <u style=""><strong>Processing the Data</strong></u></h4>
+                        <p class="mbr-text mbr-fonts-style display-7">&nbsp; &nbsp; Since the dataset has already been cleaned and integrated by Inside Airbnb, together with the data dictionary which provides detailed descriptions for each variable, the dataset is quite straightforward to read and understand. However, as the dataset is directly obtained from Airbnb listing data, there are some listings whose names contain special characters, emojis, or other languages. Therefore, what we did was to extract all listings with non-English characters in their names and create a subset of the original dataset without these listings in case any of our future research would focus on the information hidden behind the names of the listings. We also obtained a subset with only these listings with special characters and the original dataset if we would like to have a comprehensive understanding using all information provided by the dataset.
+<br>
+<br>&nbsp; &nbsp; We combined the listing file with the reviews file with the Airbnb ids provided in both datasets with R. Since the reviews dataset is simply a record of Airbnb id and the date when the review was made, the date recorded in each observation would correspond to a review made on that particular day. Therefore, by counting the number of observations for each Airbnb id, we were able to find the number of reviews for each Airbnb recorded. Then we used the merge function to add reviews count to the original listing dataset.
+<br>
+<br>&nbsp; &nbsp; We also combined an updated neighborhood dataset to the listing dataset. For the updated neighborhood dataset, we found the median income in each neighborhood from LA times and combined it with the original neighborhood dataset by the name of each neighborhood. Once again, we use the neighborhood name to combine the updated neighborhood dataset to our listing dataset in order to have all our data in a single table.
+<br>
+<br>&nbsp; &nbsp; We mainly used Tableau and R for data visualization, so we converted all subsets of the original dataset into .csv files for convenience.</p>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -102,7 +146,7 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/2863000" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7"></p><a style="z-index:1" href="https://mobirise.com/offline-website-builder.html"></a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/2863000" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">Created with Mobirise &#8204;</p><a style="z-index:1" href="https://mobirise.com/website-maker.html">Website Maker</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
